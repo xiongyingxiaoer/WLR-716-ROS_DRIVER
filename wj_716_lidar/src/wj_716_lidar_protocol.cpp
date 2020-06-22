@@ -137,6 +137,7 @@ namespace wj_lidar
        }
        else if (m_sdata.m_acdata[m_sdata.m_u32out] == 0xff && m_sdata.m_acdata[m_sdata.m_u32out+1] == 0xaa)
        {
+        heartstate = true;
         unsigned l_u32reallen  = (m_sdata.m_acdata[m_sdata.m_u32out + 2] << 8)  |
                                  (m_sdata.m_acdata[m_sdata.m_u32out + 3] << 0);
         l_u32reallen += 4;                                            //实际长度应
